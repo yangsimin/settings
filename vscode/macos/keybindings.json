@@ -1,0 +1,164 @@
+// Place your key bindings in this file to override the defaults
+[
+    // {
+    //   // 资源管理器：新建文件
+    //   "key": "a",
+    //   "command": "explorer.newFile",
+    //   "when": "filesExplorerFocus && !inputFocus"
+    // },
+    // {
+    //   // 资源管理器：新建文件夹
+    //   "key": "shift+a",
+    //   "command": "explorer.newFolder",
+    //   "when": "filesExplorerFocus && !inputFocus"
+    // },
+    // {
+    //   // 资源管理器：修改文件名称
+    //   "key": "r",
+    //   "command": "renameFile",
+    //   "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // },
+    // {
+    //   // 资源管理器：删除文件
+    //   "key": "d",
+    //   "command": "deleteFile",
+    //   "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    // },
+    // {
+    //   // 资源管理器：剪切文件
+    //   "key": "x",
+    //   "command": "filesExplorer.cut",
+    //   "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    // },
+    // {
+    //   // 资源管理器：粘贴文件
+    //   "key": "p",
+    //   "command": "filesExplorer.paste",
+    //   "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
+    // },
+    {
+      // 资源管理器：折叠文件夹
+      "key": "[",
+      "command": "workbench.files.action.collapseExplorerFolders",
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      // 垂直方向，拆分编辑器
+      "key": "ctrl+cmd+\\",
+      "command": "workbench.action.splitEditorUp"
+    },
+    {
+      // window move left
+      "key": "shift+left",
+      "command": "vim.remap",
+      "when": "vim.mode == 'Normal'",
+      "args": {
+        "after": ["<c-w>", "h"]
+      }
+    },
+    {
+      // window move right
+      "key": "shift+right",
+      "command": "vim.remap",
+      "when": "vim.mode == 'Normal'",
+      "args": {
+        "after": ["<c-w>", "l"]
+      }
+    },
+    {
+      // window move down
+      "key": "shift+down",
+      "command": "vim.remap",
+      "when": "vim.mode == 'Normal'",
+      "args": {
+        "after": ["<c-w>", "j"]
+      }
+    },
+    {
+      // window move up
+      "key": "shift+up",
+      "command": "vim.remap",
+      "when": "vim.mode == 'Normal'",
+      "args": {
+        "after": ["<c-w>", "k"]
+      }
+    },
+    {
+      // 切换到资源管理器
+      "key": "ctrl+;",
+      "command": "workbench.view.explorer",
+      "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+      // 切换到编辑区
+      "key": "ctrl+'",
+      "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+      // 切换到终端窗口
+      "key": "ctrl+t",
+      "command": "workbench.action.terminal.toggleTerminal",
+      "when": "terminal.active"
+    },
+    {
+      // 快速切换最近打开的文件1
+      "key": "alt+tab",
+      "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+      "when": "!activeEditorGroupEmpty"
+    },
+    {
+      // 快速切换最近打开的文件2
+      "key": "alt+tab",
+      "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+      "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+      // terminal 切换到下一个窗口
+      "key": "cmd+]",
+      "command": "workbench.action.terminal.focusNextPane",
+      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+      // terminal 切换到上一个窗口
+      "key": "cmd+[",
+      "command": "workbench.action.terminal.focusPreviousPane",
+      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+      // terminal 关闭窗口
+      "key": "cmd+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+      // terminal 新建窗口
+      "key": "cmd+n",
+      "command": "workbench.action.terminal.new",
+      "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+      "key": "shift+cmd+g",
+      "command": "-editor.action.previousMatchFindAction",
+      "when": "editorFocus"
+    },
+    {
+      "key": "shift+cmd+g",
+      "command": "-workbench.action.terminal.findPrevious",
+      "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "shift+cmd+g",
+      "command": "workbench.view.scm",
+      "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+      "key": "ctrl+shift+g",
+      "command": "-workbench.view.scm",
+      "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+      "command": "-vscode-neovim.send",
+      "key": "ctrl+e"
+    }
+  ]
+  

@@ -1,0 +1,274 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "auto-rename-tag.activationOnLanguage": ["html", "vue"],
+    "editor.linkedEditing": true,
+    "editor.tabSize": 2,
+    "vetur.completion.scaffoldSnippetSources": {
+      "workspace": "💼",
+      "user": "🗒️",
+      "vetur": "✌"
+    },
+    "workbench.iconTheme": "helium-icon-theme",
+    "material-icon-theme.folders.theme": "classic",
+    "material-icon-theme.folders.color": "#42a5f5",
+    "vetur.completion.autoImport": false,
+    "editor.fontSize": 14,
+    "editor.formatOnSave": true,
+    "[vue]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.autoSaveDelay": 2000,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vim.debug.silent": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": false,
+    "vim.useCtrlKeys": true,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.vimrc",
+    "vim.leader": "<Space>",
+    "vim.handleKeys": {
+      "<C-c>": false
+    },
+    "vim.autoSwitchInputMethod.enable": false,
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+    "vim.insertModeKeyBindingsNonRecursive": [
+      {
+        // 退出 Insert 模式
+        "before": ["j", "j"],
+        "commands": ["extension.vim_ctrl+["]
+      }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+      // {
+      //   // 全文搜索
+      //   "before": ["f"],
+      //   "after": ["s"]
+      // },
+      // {
+      //   "before": ["F"],
+      //   "after": ["S"]
+      // },
+      // {
+      //   "before": ["a", "i"],
+      //   "after": ["a", "I"]
+      // },
+      {
+        // 格式化文档
+        "before": ["<Leader>", "f", "d"],
+        "commands": ["editor.action.formatDocument"]
+      },
+      {
+        // 重构变量名
+        "before": ["<Leader>", "r", "n"],
+        "commands": ["editor.action.rename"]
+      },
+      {
+        // 展开/折叠代码块
+        "before": ["<Leader>", "["],
+        "commands": [
+          {
+            "command": "editor.fold"
+          },
+          {
+            "command": "vim.remap",
+            "args": {
+              "after": ["$", "%"]
+            }
+          }
+        ]
+      },
+      {
+        // 折叠代码，光标跳过折叠区
+        "before": ["z", "c"],
+        "after": ["z", "c", "$", "%"]
+      },
+      {
+        // 新建文件
+        "before": ["<Leader>", "a", "f"],
+        "commands": ["explorer.newFile"]
+      },
+      {
+        // 新建目录
+        "before": ["<Leader>", "a", "d"],
+        "commands": ["explorer.newFolder"]
+      },
+      {
+        // 关闭编辑器中其他页签
+        "before": ["<Leader>", "c", "o"],
+        "commands": [
+          {
+            "command": "workbench.action.closeOtherEditors"
+          }
+        ]
+      },
+      {
+        // 关闭编辑器中所有页签
+        "before": ["<Leader>", "c", "a"],
+        "commands": [
+          {
+            "command": "workbench.action.closeAllEditors"
+          }
+        ]
+      },
+      {
+        // git：暂存代码
+        "before": ["<Leader>", "g", "s"],
+        "commands": ["git.stage"]
+      },
+      {
+        // git：取消暂存代码
+        "before": ["<Leader>", "g", "S"],
+        "commands": ["git.unstage"]
+      },
+      {
+        // git：比对差异
+        "before": ["<Leader>", "g", "d", "f"],
+        "commands": ["git.openChange"]
+      },
+      {
+        "before": ["f", "b"],
+        "after": ["f", "("]
+      },
+      {
+        "before": ["f", "B"],
+        "after": ["f", "{"]
+      }
+    ],
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+      {
+        "before": ["f"],
+        "after": ["z"]
+      },
+      {
+        "before": ["a", "i"],
+        "after": ["a", "I"]
+      }
+    ],
+    "prettier.arrowParens": "avoid",
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "less.compile": {
+      "out": "../css/"
+    },
+    "px2vw.width": 375,
+    "funcList": {
+      "doubleSpacing": true,
+      "filters": [
+        {
+          "extensions": [".c", ".h"],
+          "native": "/^[a-z]+\\s+\\w+\\(/mgi",
+          "display": "/\\S* +(\\w+)/1",
+          "sort": 0
+        },
+        {
+          "extensions": [".cpp", ".hpp"],
+          "native": "/(?:^\\w+\\s+|^)\\w+[:]*\\w+\\(/mgi",
+          "display": "/[\\S ]+(\\w+)/",
+          "sort": 0
+        },
+        {
+          "extensions": [".ts", ".php"],
+          "native": "/(?:^|\\s)function\\s+\\w+\\(/mg",
+          "display": "/\\s*function\\s+(\\w+)/1",
+          "sort": 0
+        },
+        {
+          "extensions": [".asm"],
+          "native": "/^\\w+:\\s*$/mg",
+          "display": "/\\w+/",
+          "sort": 0
+        },
+        {
+          "extensions": [".ps1"],
+          "native": "/function\\s+\\w+-?\\w*\\s*{/img",
+          "display": "/function\\s+(\\w+-?\\w*)/1i",
+          "sort": 0
+        }
+      ]
+    },
+    "cssrem.rootFontSize": 40,
+    "liveServer.settings.CustomBrowser": "chrome",
+    "diffEditor.ignoreTrimWhitespace": false,
+    // [koroFileHeader] 头部注释配置
+    "fileheader.customMade": {
+      "Author": "simonyang",
+      "Date": "Do not edit", // 设置后默认设置文件生成时间
+      "LastEditTime": "Do not edit", // 设置后，保存文件更改默认更新最后编辑时间
+      "LastEditors": "simonyang", // 设置后，保存文件更改默认更新最后编辑人
+      "Description": ""
+    },
+    // 函数注释
+    "fileheader.cursorMode": {
+      "method": "", // 函数注释生成之后，光标移动到这里
+      "param": "" // param 开启函数参数自动提取 需要将光标放在函数行或者函数上方的空白行
+      // "return": "",
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "tabnine.experimentalAutoImports": true,
+    "mock-server.settings.environment": "none",
+    "mock-server.settings.paths": {
+      "root": "/Users/simon/knowledge/computer_science/web_frontend/project_personal/tianyishidai/public",
+      "db": "db.json",
+      "middleware": "middleware.js",
+      "injectors": "injectors.json",
+      "rewriters": "rewriters.json",
+      "store": "store.json",
+      "staticDir": "public",
+      "envDir": "env",
+      "snapshotDir": "snapshots"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cSpell.userWords": ["echart", "echarts", "pinia"],
+    "diffEditor.maxComputationTime": 0,
+    "gitlens.mode.active": "review",
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.regex.regexCaseSensitive": false,
+    // 开启粘性滚动
+    "editor.stickyScroll.enabled": true,
+    "prettier.jsxSingleQuote": true,
+    "markdown-preview-github-styles.colorTheme": "system",
+    "markdown-preview-enhanced.previewTheme": "solarized-light.css",
+    "workbench.colorTheme": "Vitesse Dark Soft",
+    "workbench.productIconTheme": "icons-carbon",
+    "http.proxy": "http://127.0.0.1:7890",
+    "https.proxy": "http://127.0.0.1:7890",
+    "typeChallenges.workspaceFolder": "/Users/simon/.typeChallenges",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Vitesse Dark Soft",
+    "workbench.preferredLightColorTheme": "Vitesse Light Soft",
+    "explorer.confirmDelete": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.guides.bracketPairs": "active",
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/init.lua",
+    "vscode-neovim.neovimExecutablePaths.darwin": "opt/homebrew/bin/nvim",
+    "extensions.experimental.affinity": {
+      "asvetliakov.vscode-neovim": 1
+    }
+  }
+  
