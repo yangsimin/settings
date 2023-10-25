@@ -197,6 +197,7 @@
     "key": "ctrl+oem_1 ctrl+x",
     "command": "-testing.cancelRun"
   },
+  // ---- nvim keybindings ⬇️
   {
     "key": "space r n",
     "command": "editor.action.rename",
@@ -216,16 +217,27 @@
     "key": "ctrl+z",
     "command": "-vscode-neovim.send"
   },
-  // {
-  //   "key": "space",
-  //   "command": "whichkey.show",
-  //   "when":"editorTextFocus && neovim.mode != insert"
-  // },
   {
-    "key": "backspace",
-    "command": "whichkey.undoKey",
-    "when": "whichkeyVisible"
+    "key": "g c",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly && neovim.mode == visual"
   },
+  {
+    "key": "g c c",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly && neovim.mode == normal"
+  },
+  {
+    "key": "g h",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  {
+    "key": "g d",
+    "command": "editor.action.revealDefinition",
+    "when": "editorTextFocus && neovim.mode == normal"
+  },
+  // ---- nvim keybindings ⬆️
   {
     "key": "ctrl+w l",
     "command": "-workbench.action.navigateRight",
@@ -281,4 +293,9 @@
     "command": "-workbench.action.closeActiveEditor",
     "when": "!editorTextFocus && !filesExplorerFocus && !searchViewletFocus && !terminalFocus"
   },
+  {
+    "key": "ctrl+d",
+    "command": "-vscode-neovim.send",
+    "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.mode == 'insert'"
+  }
 ]
