@@ -26,7 +26,7 @@ ScreenHalfWidth := A_ScreenWidth * 0.5
 
 ; 关闭锁屏功能
 RegWrite(1, "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System", "DisableLockWorkstation")
-#Escape:: {
+!^q:: {
   RegWrite(0, "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System", "DisableLockWorkstation")
   DllCall("LockWorkStation")
   Sleep(1000)
