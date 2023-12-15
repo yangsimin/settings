@@ -11,10 +11,10 @@ ScreenHalfWidth := A_ScreenWidth * 0.5
 #c:: RestoreWindow() CenterActiveWindow()                                                                             ; 居中
 #x:: RestoreWindow() WinMove(EdgeXOffset, 0, ScreenOneThirdWidth, ScreenVisibleHeight, "A")                           ; 左边 1/3
 #v:: RestoreWindow() WinMove(ScreenTwoThirdWidth, 0, ScreenOneThirdWidth, ScreenVisibleHeight, "A")                   ; 右边 1/3
-#h:: RestoreWindow() WinMove(EdgeXOffset, 0, A_ScreenWidth / 2, ScreenVisibleHeight, "A")                             ; 左边 1/2
-#l:: RestoreWindow() WinMove(A_ScreenWidth / 2, 0, A_ScreenWidth / 2, ScreenVisibleHeight, "A")                       ; 右边 1/2
-#j:: RestoreWindow() WinMove(EdgeXOffset, ScreenVisibleHeight / 2, A_ScreenWidth, ScreenVisibleHeight / 2, "A")       ; 下边 1/2
-#k:: RestoreWindow() WinMove(EdgeXOffset, 0, A_ScreenWidth, ScreenVisibleHeight / 2, "A")                             ; 上边 1/2
+#h:: RestoreWindow() WinMove(EdgeXOffset, 0, ScreenHalfWidth, ScreenVisibleHeight, "A")                               ; 左边 1/2
+#l:: RestoreWindow() WinMove(ScreenHalfWidth, 0, ScreenHalfWidth, ScreenVisibleHeight, "A")                           ; 右边 1/2
+#j:: RestoreWindow() WinMove(EdgeXOffset, ScreenHalfVisibleHeight, A_ScreenWidth, ScreenHalfVisibleHeight, "A")       ; 下边 1/2
+#k:: RestoreWindow() WinMove(EdgeXOffset, 0, A_ScreenWidth, ScreenHalfVisibleHeight, "A")                             ; 上边 1/2
 #u:: RestoreWindow() WinMove(EdgeXOffset, 0, ScreenHalfWidth, ScreenHalfVisibleHeight, "A")                           ; 左上 1/4
 #i:: RestoreWindow() WinMove(ScreenHalfWidth, 0, ScreenHalfWidth, ScreenHalfVisibleHeight, "A")                       ; 右上 1/4
 #n:: RestoreWindow() WinMove(EdgeXOffset, ScreenHalfVisibleHeight, ScreenHalfWidth, ScreenHalfVisibleHeight, "A")     ; 左下 1/4
