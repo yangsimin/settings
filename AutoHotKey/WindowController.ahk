@@ -23,6 +23,7 @@ ScreenHalfWidth := A_ScreenWidth * 0.5
 #a:: RestoreWindow() WinMove(EdgeXOffset, 0, 767, ScreenVisibleHeight, "A") ; 微信阅读窗口调整为 735px
 #Enter:: MaximizeOrRestoreWindow ; 窗口最大化
 #BackSpace:: WinMinimize "A" ; 窗口最小化
+#Space:: WinSetAlwaysOnTop -1, "A" ; 置顶窗口
 
 ; 关闭锁屏功能
 RegWrite(1, "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System", "DisableLockWorkstation")
