@@ -28,7 +28,8 @@
 PgUp::Volume_Up
 PgDn::Volume_Down
 Delete::Volume_Mute
-
+Volume_Mute::Delete
+^[:: Send("{Escape}")
 
 ; *CapsLock:: {
 ;     if A_PriorKey = "LControl" {

@@ -2,3 +2,6 @@
 
 #Include 'AltToCtrl.ahk'
 #Include 'WindowController.ahk'
+
+LAlt::LWin
+LWin::LAlt
