@@ -24,6 +24,7 @@
 !b::^b
 !n::^n
 !m::^m
+!Enter::^Enter
 !LButton::Send "^{LButton}"
 PgUp::Volume_Up
 PgDn::Volume_Down
